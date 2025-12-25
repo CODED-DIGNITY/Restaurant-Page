@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	mode: "development", // <— this line is the peace treaty
+	mode: "development",
 	entry: "./src/index.js",
 	output: {
 		filename: "bundle.js",
@@ -14,6 +14,18 @@ module.exports = {
 			template: "./src/index.html",
 		}),
 	],
+	module: {
+		rules: [
+			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+			{
+				test: /\.(png|jpe?g|gif|svg)$/i,
+				type: "asset/resource",
+			},
+		],
+	},
 	devServer: {
 		static: "./dist",
 		open: true,

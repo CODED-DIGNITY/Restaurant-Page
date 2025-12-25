@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+	--ramen-red: #bc2026;
+	--ramen-gold: #d4af37;
+	--nori-black: #1a1a1a;
+	--broth-white: #fdfaf5;
+	--wood-dark: #2c1e14;
+}
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	background: #f4f4f4;
+	display: grid;
+}
+
+nav {
+	height: 50px;
+	display: flex;
+	gap: 1rem;
+	padding: 10px;
+	background: #000;
+	justify-content: center;
+	align-items: center;
+}
+
+nav button {
+	background: none;
+	padding: 10px;
+	border: none;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+nav button:hover {
+	color: var(--ramen-red);
+	border-bottom: var(--ramen-red) 2px solid;
+}
+
+#content {
+	padding: 2rem;
+	padding: 0px;
+	margin: 0px;
+	font: "inter", sans-serif;
+}
+.hero {
+	height: 94vh;
+	background: url(./assets/images/hero.png) center/cover no-repeat;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.hero-head {
+	text-align: center;
+	font-family: "BBH Bogle", serif;
+	font-size: 6rem;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-shadow: 0px 0px 30px #000000;
+	margin: 0px;
+}
+.hero-tag {
+	opacity: 0.9;
+	text-align: center;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 0px 0px 20px #000000;
+	margin-top: 10px;
+}
+.hero-btn {
+	margin-top: 20px;
+	padding: 15px 30px;
+	font-size: 1.2rem;
+	border: none;
+	background-color: var(--ramen-red);
+	color: white;
+	cursor: pointer;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+	transition: all 0.3s;
+}
+.hero-btn:hover {
+	background-color: #000;
+	color: var(--ramen-red);
+	transform: scale(1.05);
+}
+@media (max-width: 600px) {
+	.hero-head {
+		font-size: 3.5rem;
+		padding: 0 10px;
+	}
+	.hero-tag {
+		font-size: 1.2rem;
+		padding: 0 10px;
+	}
+	.hero-btn {
+		font-size: 1rem;
+		padding: 10px 20px;
+	}
+}
+.menu {
+	height: 90vh;
+	background-color: var(--nori-black);
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+}
+
+.menu-title {
+	font-family: "BBH Bogle", serif;
+	font-weight: 400;
+	font-size: 3rem;
+	margin-bottom: 3rem;
+}
+.menu-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 2rem;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.ramen-card {
+	background: var(--broth-white);
+	padding: 15px;
+	border-left: var(--ramen-red) 5px solid;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	color: var(--nori-black);
+}
+
+.ramen-card:hover {
+	transform: translateY(-8px);
+}
+
+.ramen-card h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+}
+
+.ramen-card p {
+	opacity: 0.75;
+	font-size: 0.95rem;
+	margin-bottom: 0.5rem;
+}
+
+.ramen-card span {
+	color: #00e5ff;
+	font-weight: 600;
+}
+.ramen-card img {
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+.about {
+	min-height: 100%;
+	background: radial-gradient(circle at top, #05070b, #000);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.about-glass {
+	max-width: 700px;
+	background: rgba(15, 15, 20, 0.6);
+	backdrop-filter: blur(12px);
+	border-radius: 18px;
+	padding: 3rem 3.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 30px rgba(0, 229, 255, 0.2), 0 0 60px rgba(255, 47, 146, 0.15);
+	text-align: center;
+}
+
+.about-glass h2 {
+	font-family: "BBH Bogle", serif;
+	font-size: 2.8rem;
+	margin-bottom: 1.5rem;
+	text-shadow: 0 0 20px rgba(255, 47, 146, 0.6);
+}
+
+.about-glass p {
+	opacity: 0.8;
+	line-height: 1.7;
+	margin-bottom: 1.2rem;
+}
+
+.about-glass span {
+	display: block;
+	margin-top: 2rem;
+	letter-spacing: 2px;
+	opacity: 0.6;
+}
