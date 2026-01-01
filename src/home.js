@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Home(onTabClick = () => {}) {
 	const div = document.createElement("div");
 	div.innerHTML = `
     <div class="hero">
@@ -14,5 +14,8 @@ export default function Home() {
 			</div>
 		</div>
   `;
+	div
+		.querySelector(".hero-btn")
+		.addEventListener("click", () => onTabClick("Menu"));
 	return div;
 }

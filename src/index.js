@@ -12,7 +12,7 @@ function loadPage(page) {
 	console.log("Loading:", page);
 
 	const pages = { Home, Menu, About };
-	content.appendChild(pages[page]());
+	content.appendChild(pages[page](loadPage));
 }
 
 const nav = Navbar(loadPage);
